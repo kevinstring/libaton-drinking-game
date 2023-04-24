@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Libaton</string>
+    <string name="title_activity_main">Libaton</string>
+    <string name="package_name">com.company.libaton</string>
+    <string name="custom_url_scheme">com.company.libaton</string>
+</resources>

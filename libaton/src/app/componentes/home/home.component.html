@@ -1,0 +1,32 @@
+
+<div class="displayFlexC divContainerHome">
+  
+<div class="divImagen">
+
+</div>
+
+<div class="displayFlexC  formIngreso">
+   <a routerLink="/otros" style="text-decoration: underline;"><p>Mas juegos para la sala</p></a>
+   <img class="logoLibaton" src="assets/LIB.png">
+<form class="displayFlexC" name="form" [formGroup]="form">
+
+<input formControlName="nombre" placeholder="nombre" name="nombre" #nombre required>
+<button class="addButton"   (click)="ingresarUsuario()">+</button>
+<a *ngIf="entrar" ><button class="ingresoButton" (click)="navegar()"  type="button"></button></a>
+
+</form>
+<div  class="displayFlexC" style="height: 60vh;   gap: 5px;">
+  <div class="displayFlexR divNombres" style="align-items: center;" *ngFor="let item of nombres;let i =index">
+     <p style="color: rgb(255, 255, 255); text-align: start; width: 15vh;">{{item}}</p>
+     <button class="removerButton" (click)="borrar(i)"></button>
+     <br>
+  </div>
+
+</div>
+<a routerLink="/ruleta">
+   <div class="imgSeleccionBotella" >
+    
+   </div>
+   </a>
+</div>
+</div>

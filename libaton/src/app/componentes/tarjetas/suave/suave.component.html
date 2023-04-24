@@ -1,0 +1,25 @@
+<div class="displayFlexC divContainerSuave">
+
+  <div tabindex="0" class="displayFlexC tarjeta" (click)="cambiar()">
+
+
+      
+      <div  class="displayFlexC divTextoTarjetas" *ngIf="activar;else mensaje" >
+        
+
+        <h3 [ngClass]="{ 'anim': show }"  style="color:rgb(251, 255, 0);font-weight: bold">{{retos[random].titulo}} </h3>  
+        <p [ngClass]="{ 'anim2': show }"  style="width: 70vw;"><span *ngIf="verdadero ||retoCompartido" style="font-size: xx-large; color:yellow">{{nombre[randomNombre]}}, </span>
+           <span style="font-size: xx-large;" *ngIf="retoCompartido;else retoUnitario">
+            {{retos[random].descripcion.replace(':',' '+nombre[randomSegundoNombre]+" ")}}
+           </span></p>
+      <img src="assets/suave.png" width="100px">
+    </div>
+   
+    <ng-template #mensaje><p style="font-size: xx-large; z-index: 1;">PRESIONAME PARA COMENZAR</p></ng-template>
+    <ng-template #retoUnitario style="max-height: 25vh;"><span style="font-size: xx-large;" >{{retos[random].descripcion}}</span></ng-template>
+  </div>
+  <div class="divContainerEnd" *ngIf="finalizar"><div class="divEnd displayFlexC">
+    <p style="margin: auto; ">HA TERMINADO!</p>
+    <button (click)="navegar()"  class="botonAtras"></button></div></div>
+    <img  src="assets/LIB.png" class="logoLibaton" style="top:0;bottom:20;left: 0;right: 0;z-index: 0;">
+  </div> 

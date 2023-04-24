@@ -1,0 +1,7 @@
+{
+  "name": "libaton",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

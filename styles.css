@@ -1,0 +1,526 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css/normalize.css';
+html{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    height: 100%;
+}
+html::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/ingreso.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px); 
+    z-index: -2;
+   
+}
+img{
+    border-radius: 10px;
+    max-width: 200px;
+    margin: auto;
+}
+
+a{  
+    text-decoration: none;
+}
+p{
+    font-weight:100;
+    color:rgb(97, 234, 255);width: 300px; text-align: center;
+}
+
+h2{
+    margin-right: auto;
+}
+/*HomeComponente*/
+
+.displayFlexC{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.displayFlexR{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divContainerHome{
+  height: 100vh;
+  background-color: black;
+
+}
+
+
+.formIngreso{
+    float: right;
+    justify-content: center;
+    align-items: center;
+
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(40, 6, 48) 10%, rgba(4,0,4,1) 90% ); 
+    box-shadow: 0px 0px 15px 4px rgb(21, 1, 25);
+    width:50%;
+        height: 100vh;
+
+}
+form{
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+   outline: none;
+   color: rgb(0, 0, 0);
+   
+}
+
+input:focus{
+    box-shadow: 0px 0px 15px 4px rgb(88, 11, 104);
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.334);
+}
+
+
+button{
+
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+   outline: none;
+   color: rgba(200, 2, 255, 0);
+
+   
+}
+.removerButton{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px; /* La mitad del ancho y alto para crear un círculo perfecto */
+
+    background-image: url("assets/borrar.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 5px;
+}
+.logoLibaton{
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+    animation: myLogo linear 1s infinite alternate backwards;
+}
+
+@keyframes myLogo {
+	0%
+	{
+		opacity: .5;
+	}
+
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: .8;
+    }
+
+	100% {
+		opacity: 1;
+	}
+    100%
+	{
+		opacity: 1;
+	}
+
+    75%{
+        opacity: .8;
+    }
+    50%{
+        opacity: .7;
+    }
+
+	50%{
+		opacity: .7;
+	}
+    0%{opacity: .5;}
+}
+.ingresoButton{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px; /* La mitad del ancho y alto para crear un círculo perfecto */
+
+    background-image: url("assets/iniciar-sesion.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.addButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 25px; /* La mitad del ancho y alto para crear un círculo perfecto */
+
+    background-image: url("assets/agregar.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+    margin:10px;
+}
+
+.botonAtras{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px; /* La mitad del ancho y alto para crear un círculo perfecto */
+
+    background-image: url("assets/atras.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+}
+.divImagen{
+    height: 100vh;
+    width: 50%;
+    background-image: url("assets/drink-transformed.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+
+}
+
+
+/* SeleccionComponente */
+.divContainerSeleccion{
+            justify-content: center;
+            align-items: center;            
+        gap:20px;
+        height: 105vh;
+        background-image: url("./assets/ingreso.png");
+        background-position: center;
+        background-size: cover;
+            }
+.seleccion{
+   max-height: 35vh;
+    max-width: 70vw;
+    background-image: radial-gradient( circle 900px at 23.4% -21.8%,  rgb(1, 13, 45) 0.2%, rgb(0, 0, 0) 90.2% );
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(34, 0, 34);
+    transition: .4s;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+.divTexto{
+    justify-content: center;
+    align-items: center;
+    max-height: 30vh;
+    min-width: 50vw;
+    text-align: center;
+}
+
+
+.divTextoTarjetas{
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim{
+    animation: myAnim 1s ease 0s 1 normal forwards;
+
+}
+.anim2{
+    animation: myAnim2 .5s ease 0s 1 normal forwards;
+
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+@keyframes myAnim2 {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+.seleccion:hover{
+    transform: scale(105%);
+}
+
+html::before{
+    height: 50vh;
+}
+
+/*Tarejetas*/
+
+.divContainerSuave{
+    height: 100vh;
+    background-image: url("./assets/ingreso.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient( circle 900px at 23.4% -21.8%,  rgb(4, 25, 84) 0.2%, rgb(1, 1, 1) 90.2% );
+    min-width: 90vw;
+    min-height: 80vh;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 0px 20px 10px rgb(34, 0, 34);
+}
+
+.tarjeta:hover{
+   cursor: pointer;
+}
+
+.divContainerEnd{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.divContainerEnd::before{
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("./assets/ingreso.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(10px); 
+        z-index: 1;
+   
+}
+
+.divEnd{
+    position: relative;
+    min-height: 50vh;
+    min-width: 50vw;
+    background-image: radial-gradient( circle 900px at 23.4% -21.8%,  rgb(6, 20, 61) 0.2%, rgb(5, 1, 16) 90.2% );
+    align-items: center;
+    font-size: xx-large; 
+    border-radius: 10px; 
+    z-index: 2;
+  
+}
+.divLogo{
+    width: 300px;
+    height: 50px;
+    background-image: url("assets/LIB.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.divLogoTarjetas{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 350px;
+    height: 50px;
+    background-image: url("assets/LIB.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.divNombres{
+   
+    background-color: rgb(158, 0, 173);
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    z-index: 2;
+
+}
+
+@media (max-width: 767px){
+    .divContainerSeleccion{
+        display: flex;
+    gap:10px;
+    }
+    img{
+        width: 20%;
+    }
+    h2{
+        margin-right: 0;
+        
+    }
+    h3{
+        text-align: center;
+    }
+
+    .divTexto{
+        display: grid;
+        grid-template-rows:30px auto ; /* 80px para la fila del título y 'auto' para la fila adicional */
+        grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+        gap: 20px; 
+     
+    }
+
+    .h2Seleccion{
+        grid-row: 1 / 2; /* ocupa la primera fila */
+        grid-column: 1 / -1; /* ocupa todas las columnas */
+        
+    }
+
+    .imgSeleccion{
+        grid-row: 2 / -1; /* ocupa todas las filas a partir de la segunda */
+        grid-column: 1 / 2; /* ocupa la primera columna */
+        width: 30vw;
+    }
+    .pSeleccion{
+        grid-row: 2 / -1; /* ocupa todas las filas a partir de la segunda */
+        grid-column: 2 / -1; /* ocupa la segunda columna */
+        width: 50vw;
+        text-align: start;
+    }
+    .divTextoTarjetas{
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        min-width: 75vw;
+    }
+    .seleccion{
+        max-width: 90vw;
+        
+    }
+   
+    .divImagen{
+    
+        content: '';
+      
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        filter: blur(10px); 
+        z-index: 12;
+      
+     
+       float: none;
+    }
+
+    .divNombres{
+        flex-wrap: wrap;
+            width: auto;
+        height: 50px;
+        justify-content:center
+    }
+
+    .formIngreso{
+        position: absolute;
+        float: none;
+        width:100vw;
+        height: auto;
+        background-image:none;
+        z-index: 13;
+        
+    }
+    form{
+        border-radius: 10px;
+        margin-top: 60px;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+
+        width: 80vw;
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(40, 6, 48, 0.869) 10%, rgba(4, 0, 4, 0.629) 90% ); 
+    }
+
+    .divContainerHome{
+        height: auto;
+
+    }
+}
