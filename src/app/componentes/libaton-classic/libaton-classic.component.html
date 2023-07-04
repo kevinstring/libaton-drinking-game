@@ -1,0 +1,79 @@
+
+<a  (click)="salir()"  class="botonSalir">
+  
+  </a>
+  <div style="height: 100vh;" class="displayFlexC divContainerSeleccion">
+
+<div>
+  <a  (click)="suave()"> 
+     <div class="displayFlexR seleccion">
+      <div class="displayFlexR divTexto">
+
+      <p class="pSeleccion" >
+        <span class="h2Seleccion" style="color:rgb(251, 255, 0)">SUAVE </span>
+           <br> ¡Es hora 
+      de sacudirte con elegancia y mantener la diversión en un nivel suave pero emocionante!</p>
+      <img class="imgSeleccion" src="assets/suave.png" >
+    </div>
+    
+    
+ 
+  </div></a>
+</div>
+<div *ngIf="modoPagado else modoGratis">
+  <a (click)="intenso()" class="link"  > 
+    <div class="displayFlexR seleccion">
+      <div class="displayFlexR divTexto">
+      
+        <p class="pSeleccion" >
+          <span class="h2Seleccion" style="color:rgb(251, 255, 0)">INTENSO </span>
+           <br>Si estás buscando emociones fuertes y retos que te hagan sudar, ¡esta es tu categoría!</p>
+        <img class="imgSeleccion" src="assets/intenso.png">
+      </div>
+      
+  </div></a>
+
+</div>
+<div  >
+  <a  (click)="extremo()" class="link" >
+    <div  class="displayFlexR seleccion" >
+      <div class="displayFlexR divTexto">
+       
+        <p  class="pSeleccion" >
+           <span class="h2Seleccion" style="color:rgb(251, 255, 0)">EXTREMO </span>
+           <br>
+          ¡Aquí es donde  las cosas se  ponen realmente locas! En esta categoría, no hay límites ni inhibiciones. </p>
+        <img class="imgSeleccion" src="assets/extremo1.png">
+      </div>
+        
+    </div>
+  </a>
+  </div>   </div>
+  <ng-template #modoGratis >
+
+    <a  class="link" (click)="divPagosI()"  > 
+      <div class="displayFlexR divModoGratis">
+        <div class="displayFlexR divTexto">
+        
+          <p class="pSeleccion" >
+            <span class="h2Seleccion" style="color:rgb(251, 255, 0)">INTENSO </span>
+             <br>Si estás buscando emociones fuertes y retos que te hagan sudar, ¡esta es tu categoría!</p>
+          <img class="imgSeleccion" src="assets/intenso.png">
+          <img class="imgBloqueo" src="assets/candado.png">
+        </div>
+        
+    </div></a>
+
+  </ng-template>
+  <div *ngIf="abrirDivPagosI" class="displayFlexC divContainerPagos">
+    <h2 class="h2Seleccion" style="text-align: center; color: white;" class="pSeleccion">INTENSO</h2>
+    <p>Estas listo para intensificar la fiesta? En este modo hay retos, preguntas incomodas y muchos juegos grupales. Adentrate al modo intenso. Lejos de lo suave y muy cerca de la picardia. </p>
+    <h2  class="h2Seleccion" style="color: white;">Algunos ejemplos: </h2><br>
+    <span style="max-width: 300px;" class="nombre-color">Juan debes lamer la mesa, si no lo haces, bebes 3 tragos.</span><br>
+    <span style="max-width: 300px;" class="nombre-color">Carlos confiesa que es lo que mas te excita. Reparte 3 tragos si respondes. Si no, bebelos.</span> <br>
+    <span style="max-width: 300px;" class="nombre-color">Yo nunca he visto porno en canales para adultos! Quien si, bebe 3 tragos.</span>
+    <div class="displayFlexR divContainerSeleccionar" >
+      <button class="botonesCondiciones" (click)="abrirDivPagosI=!abrirDivPagosI">Cerrar</button>
+      <button class="botonesCondiciones" style="background-color: rgb(0, 188, 0);" (click)="realizarPago()">USD 2.55</button>
+    </div>
+  </div>  

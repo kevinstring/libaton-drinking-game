@@ -1,0 +1,30 @@
+
+<div class="displayFlexC divContainerHome">
+   <a (click)="salirApp()"  class="botonSalir"></a>
+<div class="divImagen">
+
+</div>
+
+
+<div class="displayFlexC  formIngreso">
+   <img class="logoLibaton" src="assets/LIB.png">  
+
+<form class="displayFlexC" name="form" [formGroup]="form" style="height: 30vh; margin-top: 90px;">
+   <span style="color:aquamarine; margin-bottom: 10px;">3 jugadores mínimo</span>
+   <input formControlName="nombre" placeholder="Nombre" name="nombre" #nombre required>
+<button class="addButton"   (click)="ingresarUsuario()" id="click">+</button>
+<a *ngIf="entrar" ><button class="ingresoButton" (click)="navegar()"  type="button"></button></a>
+
+</form>  
+   <ul  class="divContainerNombres" style="  gap: 7px; ">
+      <li class="displayFlexR divNombres"  *ngFor="let item of nombres;let i =index">
+         <p style="color: rgb(255, 255, 255); margin-left: 5px; width: auto;   min-height: 7px;">{{item}}</p>
+         <button class="removerButton" (click)="borrar(i)"></button>
+        
+      </li>
+    
+    </ul>
+</div>
+
+
+</div>

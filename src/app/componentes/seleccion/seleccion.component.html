@@ -1,0 +1,73 @@
+
+
+<ion-content class="ioContent" scrollEvents="true">
+<a (click)="salirApp()" id="botonSalir"  class="botonSalir">
+  <ion-alert
+  trigger="botonSalir"
+  header="¿Desea salir de la App?"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+></ion-alert>
+
+</a>
+
+
+<div class="displayFlexC divContainerSeleccion">
+
+  <div>
+    <a routerLink="/home"   class="link">
+      <div class="displayFlexR seleccion">
+        <div class="displayFlexR divTexto">
+         
+          <p class="pSeleccion" >
+             <span class="h2Seleccion" style="color:rgb(251, 255, 0)">LIBATON CLASSIC</span>
+             <br>
+            ¡Retos, preguntas, juegos y mucho más! Alegra e intensifica el ambiente con estos divertidos juegos Todo en uno.</p>
+               <img class="imgSeleccion" src="assets/LIB.png">
+        </div>
+          
+      </div>
+    </a>
+    </div>
+    <div>
+    <a routerLink="/ruleta" class="link">
+      <div class="displayFlexR seleccion">
+        <div class="displayFlexR divTexto">
+         
+          <p class="pSeleccion" >
+             <span class="h2Seleccion" style="color:rgb(251, 255, 0)">LA BOTELLITA </span>
+             <br>
+              El clasico juego de la botellita, los mejores retos para emocionar el ambiente.</p>
+               <img class="imgSeleccion" src="assets/botella.png">
+        </div>
+          
+      </div>
+    </a>
+    </div>
+    <!-- <a routerLink="/adivina" class="link">
+      <div class="displayFlexR seleccion">
+        <div class="displayFlexR divTexto">
+         
+          <p class="pSeleccion" >
+             <span class="h2Seleccion" style="color:rgb(251, 255, 0)">ADIVINAME</span>
+             <br>
+             Pon a prueba tus habilidades de deducción y deja que tus amigos te guíen hacia la respuesta.</p><img class="imgSeleccion" src="assets/quien.png">
+        </div>
+          
+      </div>
+    </a> -->
+    <a routerLink="/basta" class="link">
+      <div class="displayFlexR seleccion">
+        <div class="displayFlexR divTexto">
+         
+          <p class="pSeleccion" >
+             <span class="h2Seleccion" style="color:rgb(251, 255, 0)">BASTA EXPRESS</span>
+             <br>
+             ¡Desafía tu ingenio y creatividad en el divertido juego de Basta Express! </p><img class="imgSeleccion" src="assets/bastaFoco.png">
+        </div>
+          
+      </div>
+    </a>
+ 
+    </div>
+</ion-content>

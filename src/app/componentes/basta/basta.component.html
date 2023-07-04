@@ -1,0 +1,19 @@
+<div class="displayFlexR divContainerBasta">
+  <a routerLink="/seleccion"  class="botonSalir" ></a>
+
+<div class="displayFlexR basta" (click)="cambiar()">
+  <h1  style="font-size: 4em; margin: auto;" *ngIf="aparecerLetra  else emote">
+   {{letra}}
+  </h1>
+  <ng-template #emote>
+       <img   class="animationFicha" src="assets/ficha.png" [style]="animacion">
+  </ng-template>
+  
+  <p *ngIf="presioname else bienvenido" class="categoriaBasta" style="font-size: 1.4em; margin: auto; transform: scale(1);">
+    {{cat}}
+  </p>
+  <ng-template #bienvenido><p>PRESIONAME</p></ng-template>
+  
+</div>
+
+</div>

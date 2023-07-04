@@ -1,0 +1,26 @@
+<div class="displayFlexC divContainerSuave">
+  <a routerLink="/libaton"  class="botonSalir"></a>
+  <div class="displayFlexC tarjeta" (click)="!boolBotellita?cambiar():null  ">  
+
+
+    <div  class="displayFlexC divTextoTarjetas" *ngIf="activar;else mensaje" >
+     
+      
+      <h3 [ngClass]="{ 'anim': show }"  style="font-size: 1em;color:rgb(221, 254, 10);font-weight: bold;text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.82)
+      ">{{retos[random].titulo}} </h3>  
+      <p id="pDes" [ngClass]="{ 'anim2': show }"  style="width: 70vw;margin: auto; max-height: 50vh;">
+      <span [innerHtml]="descripcion" *ngIf="retoCompartido || retoUnitaro || boolAll ||boolEntra || boolEntraBotellita"> </span></p>
+    <img *ngIf="!boolBotellita" class="imagenPresentacion" src="assets/intenso.png" width="100px">
+  </div>
+ 
+  <ng-template #mensaje><p style="font-size: xx-large; z-index: 1;">PRESIONAME PARA COMENZAR</p></ng-template>
+</div>
+
+  <app-ruleta *ngIf="boolBotellita" (click)="botellita()" > </app-ruleta>
+
+
+<div class="divContainerEnd" *ngIf="finalizar"><div class="divEnd displayFlexC">
+    <p style="margin: auto; ">HA TERMINADO!</p>
+    <a routerLink="/libaton"><button  class="botonAtras" style="width: 300px ; z-index: 500;"></button></a></div></div>
+    <img *ngIf="!boolBotellita"  src="assets/LIB.png" class="logoLibaton" style="top:0;bottom:20;left: 0;right: 0;z-index: 0;">
+  </div> 

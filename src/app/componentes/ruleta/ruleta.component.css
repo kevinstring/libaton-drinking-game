@@ -1,0 +1,72 @@
+.divContainerBotellas{  
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: flex;
+    background-image: radial-gradient( circle 900px at 23.4% -21.8%,  rgb(6, 20, 61) 0.2%, rgb(5, 1, 16) 90.2% );
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 70vh;
+z-index: 900;
+border-radius: 10px;
+}
+#ruleta {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 450px;   
+transition: transform 2s cubic-bezier(0,0,0.3,1);
+    transform: rotate(var(--rotacion));
+    z-index: 20;
+
+  }
+.divContainerBotellita{
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/ingreso.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px); 
+    z-index: -300;
+
+}
+.imagenBotella{
+    max-width: 400px;
+}
+
+.menuBotellas{
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    width: 70px;
+
+    animation:botellita 2s infinite alternate;
+}
+
+@keyframes botellita {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75%{
+        transform:rotate(-15deg)
+    }
+    100%{
+        transform:rotate(0deg)
+    }
+}

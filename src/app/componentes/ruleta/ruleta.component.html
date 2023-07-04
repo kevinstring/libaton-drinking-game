@@ -1,0 +1,19 @@
+
+
+   <div class="divContainerBotellita"></div> <a routerLink="/seleccion" class="botonSalir"></a>
+    <img class="menuBotellas" src="assets/beer-bottle.png" (click)="mostrarMenu=true">
+    <div class="divContainerBotellas" *ngIf="mostrarMenu">
+      
+            <img *ngFor="let i of imagenes"   class="imagenBotella" [src]="i" #e (click)="elegir(i)">
+     
+        <!-- <a ><img class="imagenBotella" id="1" src="assets/botella1.png" #nombre (click)="elegir(nombre)" ></a>
+        <img id="2" class="imagenBotella" #nombre2 src="assets/botella2.png"  (click)="elegir(nombre2)" > -->
+
+    </div>
+<div style="display:flex;flex-direction:column; height: 100%; justify-content: center; align-items: center;">
+<img id="ruleta" [src]="imagen" [style]="rotacion"   (click)="click()">
+
+
+<p *ngIf="mostrar" style="position: absolute; z-index: 500; top: 85vh;"> {{retos[numeroRandom]}}</p>
+</div>
+

@@ -1,0 +1,54 @@
+
+
+<div class="displayFlexC divContainerAdivina">
+  <a routerLink="/seleccion"  class="botonSalir" (click)="terminarCount()"></a>
+  <div class="displayFlexC tarjeta"  (click)="!entra?entrar(): !ganastes?ganaste():null">
+    
+      <div  *ngIf="entra;" style="color:rgb(225, 255, 0)">
+        <p style="font-size: 2.5em;">{{item}}</p>
+        <p style="font-size: 2em;">{{contador}} </p>
+      
+
+      </div>
+      
+     
+      <div class="displayFlexC" style="align-items: center; justify-content: center;"  #noEntra *ngIf="inicio">
+     
+        <p>Presiona para iniciar</p>
+
+        <ion-list style="background-color: transparent;" >
+       <ul>
+        <li>
+          <ion-label>¡PRESIONA LA PANTALLA CUANDO LOGRES ADIVINAR!</ion-label><br>
+        </li>
+        <li>
+            <ion-label>Turnos comienzan por la derecha.</ion-label><br>
+          </li>
+          <li>
+            <ion-label>Coloca el dispositivo en tu frente antes de dar Tap</ion-label><br>
+          </li>
+            <li>
+            <ion-label>1 minuto de tiempo para adivinar.</ion-label><br>
+          </li>
+        
+          <li>
+            <ion-label>¡Diviértete!</ion-label><br>
+          </li>
+       </ul>
+
+        </ion-list>
+        <img src="assets/quien.png" style="max-width:50px;">
+      </div>
+
+    </div>
+   
+  
+    <div class="divContainerEnd" *ngIf="finalizado"><div class="divEnd displayFlexC">
+      <p style="margin: auto; ">¡Has perdido! La respuesta era: <span>{{item}}<br> debes beber {{tragos[aleatorioTragos]}} tragos.</span></p>
+      <button  class="botonAtras" style="width: 300px ; z-index: 500;" (click)="finaliza()"></button></div></div>
+      <img  src="assets/LIB.png" class="logoLibaton" style="top:0;bottom:20;left: 0;right: 0;z-index: 0;">
+      <div class="divContainerEnd" *ngIf="ganastes"><div class="divEnd displayFlexC">
+        <p style="margin: auto;">¡Felicidades! La respuesta era: {{item}}<br><span>Puedes repartir {{tragos[aleatorioTragos]}} tragos</span></p>  
+        <button  class="botonAtras" style="width: 300px ; z-index: 500;" (click)="finaliza()"></button></div></div>
+  </div>
+ 
